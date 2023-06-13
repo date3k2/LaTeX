@@ -12,3 +12,114 @@
 \usepackage{supertabular}
 \usepackage{titlesec}
 \hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+	
+	% Name & headline
+	\heading{Dat Nguyen}{Computer Science Student}
+	
+	\switchcolumn
+	
+	% Identity card
+	\vspace{0.01\textheight}
+	\begin{supertabular}{ll}
+		\footnotesize\faPhone & +84 39 33 25 155 \\
+		\footnotesize\faEnvelope & \href{mailto:nguyenduydat047@gmail.com}{nguyenduydat047@gmail.com} \\
+		\footnotesize\faLinkedin & \href{https://www.linkedin.com/in/date3k2}{date3k2} \\
+	\end{supertabular}
+	
+	\bigskip
+	\switchcolumn*
+	
+	\section{education}
+	
+	\entry{Hanoi University of Science and Technology}{Bachelor, Computer Science}{Ha Noi}{2021 -- Present}
+	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+		\item  Learning fundamentals of computer science. \vspace{1mm}
+		\item  Learning problem solving, technical and soft skills.
+		      \vspace{1mm}
+		\item Developing a web application as part of a team project.
+	\end{itemize}
+	
+	\medskip
+	
+	\entry{Yen Khanh A High School}{Graduated}{Ninh Binh}{2018 -- 2021}
+	
+	\switchcolumn
+	
+	\section{skills}
+	\begin{supertabular}{rl}
+		\tableentry{\footnotesize\faCode}{Python \textperiodcentered{} C/C++}{}
+		\tableentry{}{C\# \textperiodcentered{} SQL}{}
+		\tableentry{}{Fullstack Development}{}
+		\tableentry{}{}{}
+		
+		\tableentry{\footnotesize\faLanguage}{English \textperiodcentered{} advanced}{}
+		\tableentry{}{Vietnamese \textperiodcentered{} native}{}
+	\end{supertabular}
+	
+	\switchcolumn*
+	\section{personal projects}
+	
+	\entry{Online Library}{A web app for reading and contributing PDF book online, using Angular and ASP .NET framework.}{ \href{https://github.com/date3k2/online-book-library}{\textbf{GitHub}}}{ }
+	\switchcolumn
+	
+	\section{other interests}
+	\begin{supertabular}{rl}
+		\tableentry{Tech}{Learning new technology}{spaceafter}
+		\tableentry{Music}{Pop, R\&B}{spaceafter}
+		\tableentry{Sport}{Football, Chess}{}
+	\end{supertabular}
+	
+	\switchcolumn*
+	\section{experience}
+	
+	\entry{IT YKA Club }{Member, Lecturer}{Ha Noi}{2021 -- Present}
+	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+		\item The club in my high school for alumini who interested in IT. \vspace{1mm}
+		\item We teach our new members programming language like C++ and new technologies. We also hold seminars to share experience, skills,...
+	\end{itemize}
+	
+	\medskip
+	
+	\entry{NCCPLUS VIETNAM}{Backend Developer Intern}{Ha Noi}{10/2022 -- 2/2023}
+	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+		\item Creating WebAPI with ASP .NET Core.
+		\item Learning Source Control, Angular framework.
+	\end{itemize}
+	\switchcolumn
+	
+	\section{certificates}
+	\begin{supertabular}{rl}
+		\tableentry{2023}{\textbf{Git \& Ruby Language}}{}
+		\tableentry{}{Edtech Centre \& Sun Asterisk}{spaceafter}
+		\tableentry{2022}{\textbf{WebDev Fullstack 21 Hours}}{}
+		\tableentry{}{Edtech Centre \& MISA JSC}{spaceafter}
+	\end{supertabular}
+	
+\end{paracol}
+
+\vspace*{\fill}
+
+\end{document}
