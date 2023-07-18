@@ -1,1 +1,1 @@
-# A report in Operating System course in HUST
+## A report about Deadlock in Operating System course, HUST
